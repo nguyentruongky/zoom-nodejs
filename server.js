@@ -23,7 +23,7 @@ app.get('/:room', (req, res) => {
 })
 
 // listener
-server.listen(3030)
+server.listen(process.env.PORT || 3030)
 
 io.on('connection', (socket) => {
     socket.on('join-room', (roomId, userId) => {
